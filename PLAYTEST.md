@@ -28,7 +28,7 @@
 - Trận 150s, tối thiểu 1 người. Người vào giữa trận chờ trận sau và spectate; reset nhân vật loại khỏi trận hiện tại.
 - Ghi timestamp/CFrame/Humanoid state tại nhịp 0.1s. Mỗi 10s tạo một Echo replay lặp lại đường cũ.
 - 8 Echo active/người, 96/server. Pool client có thêm 1 slot/người để fade Echo cũ trong 1s; slot fade không gây hit.
-- Clone trong suốt có màu và tên, không Humanoid, không Touched, không physics collision. Client nội suy, server kiểm tra hit 20Hz bằng spatial grid và khoảng cách bình phương.
+- Clone trong suốt có màu và tên, không Humanoid, không Touched, không physics collision. Client nội suy, server kiểm tra hit 20Hz bằng bình phương khoảng cách trên toạ độ số phẳng (0.46 ms/tick với 96 Echo, đo bằng Lune).
 - Echo chạm làm người chơi DOWNED và ngã ragdoll vật lý do server sở hữu, không Anchored. Hỗ trợ Motor6D/R6 và AnimationConstraint/R15; khớp gốc được phục hồi khi cứu hoặc về lobby. Bleedout vẫn 10s; không đặt Health = 0 lúc DOWNED để còn cứu được. Người sống gần vị trí thân hiện tại 6 studs giữ E/X/nút touch 2.5s để cứu; rời vị trí, bị hạ, thả nút hoặc ra xa sẽ huỷ. Miễn nhiễm 2s đầu trận/sau cứu.
 - Core xuất hiện mỗi 2–4s, tối đa 8; server kiểm tra vị trí rồi cộng đúng một người.
 - HUD timer/alive/những người cần cứu/Core/next Echo, onboarding 15s, spectate, kết quả thưởng, âm báo cơ bản.
