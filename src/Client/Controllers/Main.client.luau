@@ -1,6 +1,6 @@
 --!strict
 --[[ Main client — Kết nối packet/controller một lần cho mỗi client.
-	Server gửi snapshot/path; RenderStepped chỉ nội suy Echo, không xử lý gameplay. ]]
+	Server gửi snapshot/path; PreRender chỉ nội suy Echo, không xử lý gameplay. ]]
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
 local HttpService = game:GetService("HttpService")
@@ -20,7 +20,10 @@ end)
 Packets.Echo.listen(Match.echo)
 Packets.Ready.send(nil)
 local lastUpdate = 0
-cleanup:Add(RunService.RenderStepped:Connect(function()
+-- PreRender chạy mỗi frame ngay trước khi khung hình được vẽ, và chỉ có ở client.
+-- Đây là tên mới của RenderStepped — RenderStepped đã bị deprecate
+-- (creator-docs: reference/engine/classes/RunService.yaml).
+cleanup:Add(RunService.PreRender:Connect(function()
 	local now = workspace:GetServerTimeNow()
 	EchoVisual.render(now)
 	if now - lastUpdate >= 0.1 then

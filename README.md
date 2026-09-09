@@ -55,7 +55,7 @@ src/
 └── Client/Controllers/          StarterPlayerScripts — chỉ UI, VFX, âm thanh, input
     ├── Main.client.luau         Nối packet và controller đúng một lần
     ├── MatchController.luau     Dịch snapshot của server thành HUD
-    ├── EchoVisualController     Pool clone không Humanoid, nội suy mỗi frame
+    ├── EchoVisualController     Pool clone không Humanoid, nội suy mỗi frame (PreRender)
     ├── EchoAnimationController  Phát animation avatar gốc trên clone
     ├── ReviveController.luau    Chọn mục tiêu gần nhất, gửi ý định giữ nút
     ├── UIController.luau        HUD dựng bằng Fusion
