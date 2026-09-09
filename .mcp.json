@@ -1,9 +1,11 @@
 {
   "mcpServers": {
     "roblox-studio": {
-      "command": "npx",
-      "args": ["-y", "robloxstudio-mcp@2.6.0"],
-      "env": {}
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "%LOCALAPPDATA%\\Roblox\\mcp.bat"
+      ]
     }
   }
 }
