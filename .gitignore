@@ -1,0 +1,20 @@
+# Roblox place file build ra từ rojo build (không commit)
+*.rbxl
+*.rbxlx
+*.rbxl.lock
+*.rbxlx.lock
+
+# Thư viện tải bằng Wally
+/Packages
+/ServerPackages
+/DevPackages
+
+# Rác hệ điều hành
+Thumbs.db
+.DS_Store
+
+# Log local, không chứa source game.
+*.log
+
+# Sinh tự động bằng `rojo sourcemap`, lỗi thời ngay khi thêm/xoá file .luau.
+sourcemap.json

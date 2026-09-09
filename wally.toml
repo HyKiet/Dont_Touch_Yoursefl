@@ -1,0 +1,13 @@
+[package]
+name = "shkdev/dont-touch-your-clone"
+version = "0.1.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+ByteNet = "ffrostflame/bytenet@0.4.6"
+Fusion = "elttob/fusion@0.3.0"
+Janitor = "howmanysmall/janitor@=1.16.0"
+
+[server-dependencies]
+ProfileStore = "lm-loleris/profilestore@1.0.3"

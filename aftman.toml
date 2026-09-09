@@ -1,0 +1,20 @@
+# Aftman — trình quản lý công cụ cho dự án.
+#
+# File này ghim CHÍNH XÁC phiên bản công cụ mà dự án dùng. Nhờ vậy máy nào
+# mở dự án cũng chạy đúng một phiên bản, không bị lệch.
+#
+# Cách dùng: mở terminal trong thư mục dự án rồi gõ `aftman install`.
+# Sau đó lệnh `rojo` gõ trong thư mục này luôn là bản 7.7.0.
+
+[tools]
+wally = "UpliftGames/wally@0.3.1"
+# Rojo — đồng bộ code từ thư mục này vào Roblox Studio.
+# Ghim 7.7.0 để khớp đúng với plugin Rojo 7.7.0 đang cài trong Studio.
+# Plugin và CLI lệch phiên bản là nguyên nhân lỗi kết nối phổ biến nhất.
+rojo = "rojo-rbx/rojo@7.7.0"
+
+# StyLua — tự động căn chỉnh code Luau cho đồng nhất (chạy: stylua src)
+stylua = "JohnnyMorganz/StyLua@0.20.0"
+
+# Selene — bắt lỗi và code xấu trước khi chạy game (chạy: selene src)
+selene = "Kampfkarren/selene@0.27.1"

@@ -1,0 +1,34 @@
+{
+  "name": "DontTouchYourClone",
+  "servePort": 34872,
+  "globIgnorePaths": ["**/*.md", "**/.gitkeep"],
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "Packages": { "$path": "Packages" },
+      "Shared": {
+        "$path": "src/Shared"
+      }
+    },
+
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "ServerPackages": { "$path": "ServerPackages" },
+      "Services": {
+        "$path": "src/Server/Services"
+      }
+    },
+
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        "Controllers": {
+          "$path": "src/Client/Controllers"
+        }
+      }
+    }
+  }
+}

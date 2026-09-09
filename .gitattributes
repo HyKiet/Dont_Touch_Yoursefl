@@ -1,0 +1,5 @@
+# Chuẩn hoá xuống dòng: trong repo luôn là LF, khỏi lệch giữa Windows và macOS.
+* text=auto eol=lf
+*.rbxl binary
+*.rbxlx binary
+*.rbxm binary
